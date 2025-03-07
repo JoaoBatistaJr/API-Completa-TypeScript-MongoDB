@@ -1,3 +1,4 @@
+
 import {MongoClient as Mongo, Db} from 'mongodb'
 
 export const MongoClient = {
@@ -17,4 +18,3 @@ export const MongoClient = {
 
     console.log("✅ Conectado ao MongoDB Atlas!");
   }
-}

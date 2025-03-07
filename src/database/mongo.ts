@@ -1,5 +1,4 @@
-
-import {MongoClient as Mongo, Db} from 'mongodb'
+import { MongoClient as Mongo, Db } from 'mongodb'
 
 export const MongoClient = {
   client: undefined as unknown as Mongo,
@@ -10,7 +9,7 @@ export const MongoClient = {
     const username = process.env.MONGODB_USERNAME
     const password = process.env.MONGODB_PASSWORD
 
-    const client = new Mongo(url, {auth: { username, password}})
+    const client = new Mongo(url, { auth: { username, password } })
     const db = client.db("users-db")
 
     this.client = client
@@ -18,3 +17,4 @@ export const MongoClient = {
 
     console.log("✅ Conectado ao MongoDB Atlas!");
   }
+}

@@ -1,3 +1,4 @@
+
 import {MongoClient as Mongo, Db} from 'mongodb'
 
 export const MongoClient = {
@@ -5,7 +6,7 @@ export const MongoClient = {
   db: undefined as unknown as Db,
 
   async connect(): Promise<void> {
-    const url = process.env.MONGODB_URL || "localhost:27017"
+    const url = process.env.MONGODB_URL || "mongodb+srv://cluster0.aryxm.mongodb.net/"
     const username = process.env.MONGODB_USERNAME
     const password = process.env.MONGODB_PASSWORD
 
@@ -15,6 +16,5 @@ export const MongoClient = {
     this.client = client
     this.db = db
 
-    console.log("Connected to mongodb")
+    console.log("✅ Conectado ao MongoDB Atlas!");
   }
-}
